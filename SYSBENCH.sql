@@ -25,36 +25,71 @@ CREATE TABLE "sysbench" (
 	"file_fsyncs_s" numeric (40,10),
 	"throughput_read_mib_s" numeric (40,10),
 	"throughput_written_mib_s" numeric (40,10),
+	
+	"zram_size" numeric (40,10),
+	"zram_usage" numeric (40,10),
+	"zcompressing22_speed_kib_s" numeric (40,10),
+	"zcompressing22_usage_prcnt" numeric (40,10),
+	"zcompressing22_r_rating_mips" numeric (40,10),
+	"zcompressing22_u_rating_mips" numeric (40,10),
+	"zdecompressing22_speed_kib_s" numeric (40,10),	"zdecompressing22_usage_prcnt" numeric (40,10),	"zdecompressing22_r_rating_mips" numeric (40,10),	"zdecompressing22_u_rating_mips" numeric (40,10),
+
+	"zcompressing23_speed_kib_s" numeric (40,10),
+	"zcompressing23_usage_prcnt" numeric (40,10),
+	"zcompressing23_r_rating_mips" numeric (40,10),
+	"zcompressing23_u_rating_mips" numeric (40,10),
+	"zdecompressing23_speed_kib_s" numeric (40,10),
+	"zdecompressing23_usage_prcnt" numeric (40,10),
+	"zdecompressing23_r_rating_mips" numeric (40,10),
+	"zdecompressing23_u_rating_mips" numeric (40,10),
+	
+	"zcompressing24_speed_kib_s" numeric (40,10),
+	"zcompressing24_usage_prcnt" numeric (40,10),
+	"zcompressing24_r_rating_mips" numeric (40,10),
+	"zcompressing24_u_rating_mips" numeric (40,10),
+	"zdecompressing24_speed_kib_s" numeric (40,10),
+	"zdecompressing24_usage_prcnt" numeric (40,10),
+	"zdecompressing24_r_rating_mips" numeric (40,10),
+	"zdecompressing24_u_rating_mips" numeric (40,10),
+	
+	"zcompressing25_speed_kib_s" numeric (40,10),
+	"zcompressing25_usage_prcnt" numeric (40,10),
+	"zcompressing25_r_rating_mips" numeric (40,10),
+	"zcompressing25_u_rating_mips" numeric (40,10),
+	"zdecompressing25_speed_kib_s" numeric (40,10),
+	"zdecompressing25_usage_prcnt" numeric (40,10),
+	"zdecompressing25_r_rating_mips" numeric (40,10),
+	"zdecompressing25_u_rating_mips" numeric (40,10),
+	
+	"zcompressing_avg_speed_kib_s" numeric (40,10),
+	"zcompressing_avg_usage_prcnt" numeric (40,10),
+	"zcompressing_avg_r_rating_mips" numeric (40,10),
+	"zcompressing_avg_u_rating_mips" numeric (40,10),
+	"zdecompressing_avg_speed_kib_s" numeric (40,10),
+	"zdecompressing_avg_usage_prcnt" numeric (40,10),
+	"zdecompressing_avg_r_rating_mips" numeric (40,10),
+	"zdecompressing_avg_u_rating_mips" numeric (40,10),
+	
+	"zcompressing_total_speed_kib_s" numeric (40,10),
+	"zcompressing_total_usage_prcnt" numeric (40,10),
+	"zcompressing_total_r_rating_mips" numeric (40,10),
+	"zcompressing_total_u_rating_mips" numeric (40,10),
+	
 	PRIMARY KEY ("id")
 );
 
 
 
+select *
+from sysbench s;
 
-alter table sysbench 
-alter column total_time type numeric (40,20),
-alter column total_events type double precision;
-
-INSERT INTO public.sysbench
-(file_name, total_time, total_events, 
-latency_min, latency_avg, latency_max, p95,latency_sum, 
-threads_events_avg, threads_events_stddev, threads_exectime_avg, threads_exectime_stddev)
-VALUES('a', 10.0005, 10.1, 11.0002, 0, 0, 0, 0, 0, 0, 0, 0);
-
-select  
---controller, sysbench, test_type, test_kind, 
-*
-from sysbench s 
-;
+truncate sysbench ;
 
 select controller, count(*)
 from sysbench
 group by controller
 order by 1      
 ;
-
-
-truncate sysbench ; 
 
 select substring(file_name,1,16), count(*)
 from sysbench s

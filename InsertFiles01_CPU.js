@@ -108,6 +108,6 @@ const readFiles = function (pat, forFile) {
 
 
 
-readFiles('C:/Users/Admin/Downloads/sysbench/perf-vipers-db??_sysbench?_CPU_T*.txt');
+readFiles('C:/Users/Admin/Downloads/sysbench/perf-vipers-db*_sysbench?_CPU_T*.txt');
 
 
