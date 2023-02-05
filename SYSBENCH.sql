@@ -19,6 +19,12 @@ CREATE TABLE "sysbench" (
 	"sysbench" numeric (40,20),
 	"test_type" VARCHAR(100),
 	"test_kind" VARCHAR(100),
+	
+	"file_reads_s" numeric (40,10),
+	"file_writes_s" numeric (40,10),
+	"file_fsyncs_s" numeric (40,10),
+	"throughput_read_mib_s" numeric (40,10),
+	"throughput_written_mib_s" numeric (40,10),
 	PRIMARY KEY ("id")
 );
 

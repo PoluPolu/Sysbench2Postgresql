@@ -74,11 +74,11 @@ const readFiles = function (pat, forFile) {
         // FileContent=content;
         Files2Array(content);
         Results.forEach((element, index) => console.log(index + ": " + element));
-        Results[0]=Results[0].substring(34);
-        Results[13]=Results[0].substring(0,16);
-        Results[14]=Results[0].substring(25,26);
-        Results[15]=Results[0].substring(27,30);
-        Results[16]=Results[0].substring(31,Results[0].length-4);
+        Results[0]=Results[0].substring(34); //0: C:/Users/Admin/Downloads/sysbench/perf-vipers-db01_sysbench2_FIO2.txt
+        Results[13]=Results[0].substring(0,16); //perf-vipers-db??
+        Results[14]=Results[0].substring(25,26); //1,2,3
+        Results[15]=Results[0].substring(27,30); //CPU
+        Results[16]=Results[0].substring(31,Results[0].length-4); //T064
         insertUser(Results[0], Results[1], Results[2], Results[3], Results[4], Results[5], Results[6], Results[7], Results[8], Results[9], Results[10], Results[11], Results[12], Results[13], Results[14], Results[15], Results[16]).then(result => {
             if (result) {
                 console.log(Results[0] + ' - User inserted');
