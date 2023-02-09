@@ -1,0 +1,122 @@
+			sysbench 1.0.18 (using system LuaJIT 2.1.0-beta3)
+
+			Running the test with following options:
+			Number of threads: 1
+			Initializing random number generator from current time
+
+
+			Extra file open flags: (none)
+1			128 files, 16MiB each
+			2GiB total file size
+			Block size 16KiB
+2			Periodic FSYNC enabled, calling fsync() each 100 requests.
+			Calling fsync() at the end of test, Enabled.
+			Using synchronous I/O mode
+			Doing sequential write (creation) test
+			Initializing worker threads...
+
+			Threads started!
+
+
+			File operations:
+3				reads/s:                      0.00
+4				writes/s:                     12916.79
+5				fsyncs/s:                     16546.18
+
+			Throughput:
+6				read, MiB/s:                  0.00
+7				written, MiB/s:               201.82
+
+			General statistics:
+8				total time:                          10.0035s
+9				total number of events:              294803
+
+			Latency (ms):
+10					 min:                                    0.00
+11					 avg:                                    0.03
+12					 max:                                   10.55
+13					 95th percentile:                        0.02
+14					 sum:                                 9887.31
+
+			Threads fairness:
+15	16			events (avg/stddev):           294803.0000/0.00
+17	18			execution time (avg/stddev):   9.8873/0.00
+
+
+
+
+
+
+file_name				{ index: 0, element: 'perf-vipers-db01_sysbench2_FIO2.txt' }
+cpu_speed_events_per_second ------------
+---						{ index: 1, element: '128' }
+---						{ index: 2, element: '100' }
+file_reads_s			{ index: 3, element: '0.00' }
+file_writes_s			{ index: 4, element: '12916.79' }
+file_fsyncs_s 			{ index: 5, element: '16546.18' }
+throughput_read_mib_s	{ index: 6, element: '0.00' }
+throughput_written_mib_s{ index: 7, element: '201.82' }
+gen_total_time			{ index: 8, element: '10.0035' }
+gen_total_numb_events	{ index: 9, element: '294803' }
+latency_ms_min			{ index: 10, element: '0.00' }
+latency_ms_avg			{ index: 11, element: '0.03' }
+latency_ms_max			{ index: 12, element: '10.55' }
+p95						{ index: 13, element: '0.02' }
+latency_ms_sum			{ index: 14, element: '9887.31' }
+threads_events_avg		{ index: 15, element: '294803.0000' }
+threads_events_stddev	{ index: 16, element: '0.00' }
+threads_exectime_avg	{ index: 17, element: '9.8873' }
+threads_exectime_stddev	{ index: 18, element: '0.00' }
+controller				{ index: 19, element: 'perf-vipers-db01' }
+sysbench				{ index: 20, element: '2' }
+test_type				{ index: 21, element: 'FIO' }
+test_kind				{ index: 22, element: '' }
+
+
+file_name, file_reads_s, file_writes_s, file_fsyncs_s, throughput_read_mib_s, throughput_written_mib_s, gen_total_time, gen_total_numb_events, latency_ms_min, latency_ms_avg, latency_ms_max, p95, latency_ms_sum, threads_events_avg, threads_events_stddev, threads_exectime_avg, threads_exectime_stddev, controller, sysbench, test_type, test_kind
+
+Results[0], Results[3], Results[4], Results[5], Results[7], Results[8], Results[9], Results[10], Results[11], Results[12], Results[13], Results[14], Results[15], Results[16], Results[17], Results[18], Results[19], Results[20], Results[21], Results[22]
+
+
+file_name, 
+file_reads_s, 
+file_writes_s, 
+file_fsyncs_s, 
+throughput_read_mib_s, 
+throughput_written_mib_s, 
+gen_total_time, 
+gen_total_numb_events, 
+latency_ms_min, 
+latency_ms_avg, 
+latency_ms_max, 
+p95, 
+latency_ms_sum, 
+threads_events_avg, 
+threads_events_stddev, 
+threads_exectime_avg, 
+threads_exectime_stddev, 
+controller, 
+sysbench, 
+test_type, 
+test_kind
+
+Results[0],   
+Results[3], 
+Results[4], 
+Results[5], 
+Results[7], 
+Results[8], 
+Results[9], 
+Results[10], 
+Results[11], 
+Results[12], 
+Results[13], 
+Results[14], 
+Results[15], 
+Results[16], 
+Results[17], 
+Results[18], 
+Results[19], 
+Results[20], 
+Results[21], 
+Results[22]
